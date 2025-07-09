@@ -50,14 +50,15 @@ The files in this Web repository should be placed in a directory served by the w
 In addition to the files in the repository, the file `lib/tm.conf` needs to be created.  This file contains eight lines:
 
 <pre>
-Line 1: DB name (likely TravelMapping)
-Line 2: DB read-only user (likely travmap)
-Line 3: DB read-only user password
-Line 4: DB hostname (likely localhost or 127.0.0.1)
-Line 5: HERE map id
-Line 6: HERE map code
-Line 7: ThunderForest map key
-Line 8: MapBox token
+Line 1: Mapping mode (likely highway/railway/ski_trails)
+Line 2: DB name (likely TravelMapping)
+Line 3: DB read-only user (likely travmap)
+Line 4: DB read-only user password
+Line 5: DB hostname (likely localhost or 127.0.0.1)
+Line 6: HERE map id
+Line 7: HERE map code
+Line 8: ThunderForest map key
+Line 9: MapBox token
 </pre>
 
 This file needs to be readable by the web server but should not be served by the web server.  Configure Apache to ensure this.  There are various ways to accomplish this.  On the TM production server, this is done with this global directive in `httpd.conf`:
